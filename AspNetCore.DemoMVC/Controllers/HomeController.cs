@@ -14,6 +14,7 @@ namespace AspNetCore.DemoMVC.Controllers
     {
         [Route("")]
         [Route("pagina-inicial")]
+        [Route("pagina-inicial/{id}/{categoria?}")]
         public IActionResult Index(string id, string categoria)
         {
             return View();
