@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.DemoMVC.Controllers
 {
+    [Route("")]
     [Route("gestao-clientes")]
     public class HomeController : Controller
     {
+        [Route("")]
         [Route("pagina-inicial")]
         public IActionResult Index(string id, string categoria)
         {
@@ -18,11 +20,13 @@ namespace AspNetCore.DemoMVC.Controllers
         }
 
         [Route("privacidade")]
+        [Route("politica-de-privacidade")]
         public IActionResult Privacy()
         {
             return View();
         }
 
+        [Route("erro-encontrado")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
