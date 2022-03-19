@@ -24,7 +24,7 @@ namespace AspNetCore.DemoMVC.Controllers
         [Route("politica-de-privacidade")]
         public IActionResult Privacy()
         {
-            return View();
+            return Json("{'nome': 'Bryan'}");
         }
 
         [Route("erro-encontrado")]
