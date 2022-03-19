@@ -8,13 +8,16 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.DemoMVC.Controllers
 {
+    [Route("gestao-clientes")]
     public class HomeController : Controller
     {
+        [Route("pagina-inicial")]
         public IActionResult Index(string id, string categoria)
         {
             return View();
         }
 
+        [Route("privacidade")]
         public IActionResult Privacy()
         {
             return View();
