@@ -25,10 +25,12 @@ namespace AspNetCore.DemoMVC.Controllers
         public IActionResult Privacy()
         {
             //return Json("{'nome': 'Bryan'}");
-            
-            var fileBytes = System.IO.File.ReadAllBytes(@".\wwwroot\arquivo.txt");
-            var fileName = "ola.txt";
-            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+
+            //var fileBytes = System.IO.File.ReadAllBytes(@".\wwwroot\arquivo.txt");
+            //var fileName = "ola.txt";
+            //return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+
+            return Content("Qualquer coisa");
         }
 
         [Route("erro-encontrado")]
