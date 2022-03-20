@@ -12,11 +12,25 @@ namespace AspNetCore.DemoMVC.Controllers
     {
         public IActionResult Index(int id, string categoria)
         {
-            return View();
+            var filme = new Filme 
+            {
+                Titulo = "Oi",
+                DataLancamento = DateTime.Now,
+                Genero = null,
+                Avaliacao = 10,
+                Valor = 20000
+            };
+
+            return RedirectToAction("Privacy", filme);
+            //return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(Filme filme)
         {
+            if (ModelState.IsValid)
+            {
+
+            }
 
             return View();
         }
