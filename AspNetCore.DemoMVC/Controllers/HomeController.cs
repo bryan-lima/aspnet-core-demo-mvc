@@ -32,6 +32,11 @@ namespace AspNetCore.DemoMVC.Controllers
 
             }
 
+            foreach (var error in ModelState.Values.SelectMany(m => m.Errors))
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+
             return View();
         }
 
