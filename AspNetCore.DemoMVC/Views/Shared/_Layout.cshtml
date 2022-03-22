@@ -13,9 +13,13 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+          integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -36,6 +40,8 @@
                         </li>
                     </ul>
                 </div>
+
+                <vc:Carrinho></vc:Carrinho>
             </div>
         </nav>
     </header>
@@ -50,6 +56,7 @@
         <div class="container">
             &copy; 2022 - AspNetCore.DemoMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+        <vc:Carrinho></vc:Carrinho>
     </footer>
 
     <environment include="Development">
